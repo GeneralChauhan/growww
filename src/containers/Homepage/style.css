@@ -1,0 +1,109 @@
+.topNav{
+    height: 10vh;
+    border-bottom: 0.5px solid rgb(214, 214, 214);
+    padding: 16px 4px;
+}
+.topNav, .cont2{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.navItem{
+    display: inline;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 12px;
+    padding: 7px 20px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+}
+.navItem.fav{
+    background-color: #E2F1FA;
+    border: 1px solid #88C9EC;
+    padding: 7px 20px;
+    border-radius: 15px;
+}
+.head1{
+    height: 10vh;
+    padding: 16px;
+}
+.head1 h1{
+    font-size: 32px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.head1 p{
+    font-size: 14px;
+    margin: 0;
+    font-weight: 600;
+}
+.cont2{
+    height: 10vh;
+}
+
+.cont2 .search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #D3D3D3;
+    border-radius: 15px;
+}
+.cont2 .search input{
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.cont2 .search input::placeholder{
+    font-weight: 600;
+    color: #D3D3D3;
+}
+.cont2 .search svg{
+    height: 35px;
+}
+.table1{
+    margin: 0 16px;
+    height: 60vh !important;
+    overflow-y: scroll;
+}      
+.table1 table{
+    width: 100%;
+}
+.table1 table tr th,td{
+    font-weight: 700;
+    text-align: left;
+    padding: 15px 18px;
+}              
+.table1 table tr th{
+    text-align: center;
+    font-size: 17px;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}    
+.table1 table tr td{
+    border-bottom: 1px solid #88C9EC;
+    font-size: 14px;
+    color: #454545;
+}
+.table1 table tr.tdata:hover{
+    background-color: #DCEFF8;
+}
+.table1 table tr.tdata .fa-heart{
+    color: #88C9EC;
+    font-size: 16px;
+    cursor: pointer;
+}
+.headItem{
+    text-transform: capitalize;
+}
+.headItem.title{
+    font-weight: 700;
+}
+.paginationMain{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}

@@ -1,0 +1,56 @@
+.modalCont{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+}
+.modalmain{
+    height : 50vh;
+    width: 50vw;
+    margin: 0;
+    background-color: white;
+    padding: 20px;
+}
+.bank{
+    display: flex;
+}
+.bank i{
+    font-size: 60px;
+    margin:10px;
+    color: #5160E5;
+}
+.bank .bankname{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    justify-content: center;
+}
+.bank h2,p,h5{
+    margin: 0;
+    padding: 0 ;
+    font-weight: 600;
+}
+.modalmain p{
+    color:grey;
+}
+.bankDetails{
+    padding: 10px;
+}
+.detail{
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+.detail h5{
+    margin-right: 25px;
+}
+.detail.address{
+    margin-top: 50px;
+}
+.detail i{
+    margin-right: 25px;
+    font-size: 30px;
+    color: #5160E5;
+}
