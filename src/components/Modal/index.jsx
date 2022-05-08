@@ -25,6 +25,7 @@ const Modal = ({match}) => {
         };
 
         fetchData();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
@@ -34,22 +35,22 @@ const Modal = ({match}) => {
                     <i class="fa-solid fa-building"></i>
                     <div className="bankname">
 
-                        <h2>{banks[banks.findIndex((item) => item.ifsc==ifsc)].bank_name}</h2>
+                        <h2>{banks[banks.findIndex((item) => item.ifsc===ifsc)].bank_name}</h2>
                         <p>{ifsc}</p>
                     </div>
                 </div>
                 <div className="bankDetails">
                     <div className="detail">
                         <h5> BRANCH</h5>
-                        <p> {banks[banks.findIndex((item) => item.ifsc==ifsc)].branch}</p>
+                        <p> {banks[banks.findIndex((item) => item.ifsc===ifsc)].branch}</p>
                     </div>
                     <div className="detail">
                         <h5>BANK ID</h5>
-                        <p> {banks[banks.findIndex((item) => item.ifsc==ifsc)].bank_id}</p>
+                        <p> {banks[banks.findIndex((item) => item.ifsc===ifsc)].bank_id}</p>
                     </div>
                     <div className="detail address">
                         <i class="fa-solid fa-location-dot"></i>
-                        <p> {banks[banks.findIndex((item) => item.ifsc==ifsc)].address}</p>
+                        <p> {banks[banks.findIndex((item) => item.ifsc===ifsc)].address}</p>
                     </div>
                 </div>
             </div>
