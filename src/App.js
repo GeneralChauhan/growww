@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 
 import Homepage from './containers/Homepage'
-// import Modal from './components/Modal';
+import Modal from './components/Modal';
 
 function App() {
   return (

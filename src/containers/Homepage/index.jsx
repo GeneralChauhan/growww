@@ -67,19 +67,19 @@ const Homepage = () => {
         // console.log(event.target.value);
         const filteredBank = banksOrig.filter((bank,index) => {
             // console.log(bank,category);
-            if(category==='bank_name'){
+            if(category=='bank_name'){
                 return (bank.bank_name.toString().toLowerCase().includes(event.target.value.toLowerCase())) ? bank : null;
             }
-            else if(category==='ifsc'){
+            else if(category=='ifsc'){
                 return (bank.ifsc.toString().toLowerCase().includes(event.target.value.toLowerCase())) ? bank : null;
             }
-            else if(category==='bank_id'){
+            else if(category=='bank_id'){
                 return (bank.bank_id.toString().toLowerCase().includes(event.target.value.toLowerCase())) ? bank : null;
             }
-            else if(category==='branch'){
+            else if(category=='branch'){
                 return (bank.branch.toString().toLowerCase().includes(event.target.value.toLowerCase())) ? bank : null;
             }
-            else if(category==='address'){
+            else if(category=='address'){
                 return (bank.address.toString().toLowerCase().includes(event.target.value.toLowerCase())) ? bank : null;
             }
             else{
@@ -95,11 +95,11 @@ const Homepage = () => {
         navigate(`/`);
         const newBank = banks;
         if(element.favorite){
-            const index= banks.findIndex(ele => ele===element);
+            const index= banks.findIndex(ele => ele==element);
             newBank[index] = {...newBank[index],favorite:false};
         }
         else{
-            const index= banks.findIndex(ele => ele===element);
+            const index= banks.findIndex(ele => ele==element);
             newBank[index] = {...newBank[index],favorite:true};
         }
         
@@ -107,7 +107,7 @@ const Homepage = () => {
     }
 
     const favToggler = () => {
-        if(bankCategory==="All Banks"){
+        if(bankCategory=="All Banks"){
             setBankCategory("Favorite");
             setCurrentPage(1);
         }
@@ -120,12 +120,12 @@ const Homepage = () => {
     return (
         <div>
             <div className='topNav'>
-                <div className={bankCategory==="All Banks" ? 'navItem fav' : 'navItem'} onClick={favToggler}>All Banks</div>
-                <div className={bankCategory==="Favorite" ? 'navItem fav' : 'navItem'} onClick={favToggler}>Favorites</div>
+                <div className={bankCategory=="All Banks" ? 'navItem fav' : 'navItem'} onClick={favToggler}>All Banks</div>
+                <div className={bankCategory=="Favorite" ? 'navItem fav' : 'navItem'} onClick={favToggler}>Favorites</div>
             </div>
             <div className='head1'>
                 <h1>All Banks</h1>
-                <p>{bankCategory==="All Banks" ? `${banks.length} Banks` : `${banks.filter((ele)=>(ele.favorite)).length} Banks`}</p>
+                <p>{bankCategory=="All Banks" ? `${banks.length} Banks` : `${banks.filter((ele)=>(ele.favorite)).length} Banks`}</p>
             </div>
             <div className='cont2'>
                 <div className=" col-8 ">
@@ -139,7 +139,7 @@ const Homepage = () => {
                 <div className="col-2">
                     <div className="dropdown px-2">
                         <Dropdown
-                            title={cities[cities.findIndex(i => i.value === city)].name}
+                            title={cities[cities.findIndex(i => i.value == city)].name}
                             items={cities}
                             toggle={cityChangeHandler}
                         />
@@ -148,7 +148,7 @@ const Homepage = () => {
                 <div className="col-2">
                     <div className="dropdown px-2">
                         <Dropdown
-                            title={categories[categories.findIndex(i => i.value === category)].name}
+                            title={categories[categories.findIndex(i => i.value == category)].name}
                             items={categories}
                             toggle={categoryChangeHandler}
                         />
@@ -168,7 +168,7 @@ const Homepage = () => {
                     {loading ? 
                         <div>Loading</div>
                     :
-                        bankCategory==="All Banks" 
+                        bankCategory=="All Banks" 
                         ? 
                         banks.slice(indexOfFirstBank,indexOfLastBank).map((ele, ind) => {
                             return (
@@ -202,7 +202,7 @@ const Homepage = () => {
             <div className='paginationMain'>
                 <Pagination
                     banksPerPage={banksPerPage}
-                    totalBanks={bankCategory==="All Banks" ? banks.length : banks.filter((ele)=>(ele.favorite)).length}
+                    totalBanks={bankCategory=="All Banks" ? banks.length : banks.filter((ele)=>(ele.favorite)).length}
                     paginate={paginate}
                 />
             </div>
