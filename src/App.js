@@ -10,7 +10,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/all-banks" element={<Homepage />} />
+          <Route path="/" element={<Homepage />} />
           {/* <Route path="/bank-details/:city/:ifsc" element={<Modal />} /> */}
         </Routes>
       </BrowserRouter>

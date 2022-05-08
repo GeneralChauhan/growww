@@ -92,7 +92,7 @@ const Homepage = () => {
 
     //Favorite
     const favoriteAdder = (element) => {
-        navigate(`/all-banks`);
+        navigate(`/`);
         const newBank = banks;
         if(element.favorite){
             const index= banks.findIndex(ele => ele==element);
